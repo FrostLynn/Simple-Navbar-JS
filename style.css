@@ -1,0 +1,73 @@
+/* Gaya untuk badan halaman */
+body {
+  margin: 0; /* Menghilangkan margin default */
+  font-family: Arial, Helvetica, sans-serif; /* Pemilihan jenis huruf */
+}
+
+/* Gaya untuk navigasi atas */
+.topnav {
+  overflow: hidden; /* Menghilangkan scroll jika konten terlalu besar */
+  background-color: #342e37; /* Warna latar belakang */
+}
+
+/* Gaya untuk tautan di navigasi */
+.topnav a {
+  float: left; /* Menyusun tautan ke kiri */
+  display: block; /* Menampilkan tautan sebagai blok */
+  color: #f2f2f2; /* Warna teks */
+  text-align: center; /* Posisi teks ke tengah */
+  padding: 14px 16px; /* Jarak dalam dan luar */
+  text-decoration: none; /* Menghilangkan garis bawah pada tautan */
+  font-size: 17px; /* Ukuran huruf */
+}
+
+/* Gaya untuk tautan saat digerakkan */
+.topnav a:hover {
+  background-color: #ddd; /* Warna latar belakang saat digerakkan */
+  color: black; /* Warna teks saat digerakkan */
+}
+
+/* Gaya untuk tautan yang aktif */
+.topnav a.active {
+  background-color: #eeb8c5; /* Warna latar belakang saat aktif */
+  color: black; /* Warna teks saat aktif */
+  font-weight: bold; /* Teks menjadi tebal */
+}
+
+/* Gaya untuk ikon hamburger */
+.topnav.icon {
+  display: none; /* Menyembunyikan ikon di layar lebar */
+}
+
+/* Gaya untuk layar kecil */
+@media screen and (max-width: 600px) {
+  /* Menyembunyikan semua tautan kecuali yang pertama */
+ .topnav a:not(:first-child) {
+    display: none;
+  }
+  /* Menampilkan ikon hamburger */
+ .topnav a.icon {
+    float: right; /* Menyusun ikon ke kanan */
+    display: block; /* Menampilkan ikon sebagai blok */
+  }
+}
+
+/* Gaya untuk layar kecil dengan responsif */
+@media screen and (max-width: 600px) {
+  /* Menambahkan posisi relatif ke navigasi atas */
+ .topnav.responsive {
+    position: relative;
+  }
+  /* Menambahkan posisi absolut ke ikon hamburger */
+ .topnav.responsive.icon {
+    position: absolute;
+    right: 0; /* Posisi ikon di kanan */
+    top: 0; /* Posisi ikon di atas */
+  }
+  /* Menampilkan semua tautan sebagai blok dan posisi teks ke kiri */
+ .topnav.responsive a {
+    float: none; /* Menghapus susunan */
+    display: block; /* Menampilkan sebagai blok */
+    text-align: left; /* Posisi teks ke kiri */
+  }
+}
